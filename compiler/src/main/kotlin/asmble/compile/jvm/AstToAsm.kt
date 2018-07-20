@@ -30,7 +30,7 @@ open class AstToAsm {
     }
 
     fun addFields(ctx: ClsContext) {
-        // Mem field if present
+        // Mem field if present, adds `private final field memory` to
         if (ctx.hasMemory)
             ctx.cls.fields.add(FieldNode(Opcodes.ACC_PRIVATE + Opcodes.ACC_FINAL, "memory",
                 ctx.mem.memType.asmDesc, null, null))
