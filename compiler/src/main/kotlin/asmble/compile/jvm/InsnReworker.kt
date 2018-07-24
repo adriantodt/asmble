@@ -102,7 +102,7 @@ open class InsnReworker {
         ctx.trace { "Calculating places to inject needed stack variables" }
         // How we do this:
         // We run over each insn, and keep a running list of stack
-        // manips. If there is an ins'n that needs something so far back,
+        // manips. If there is an insn that needs something so far back,
         // we calc where it needs to be added and keep a running list of
         // insn inserts. Then at the end we settle up.
         //
